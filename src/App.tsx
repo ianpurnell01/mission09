@@ -10,10 +10,12 @@ interface SchoolProps {
   state: string;
 }
 
+// set site header
 function SiteIntro() {
   return <h1 className="my-5">March Madness</h1>;
 }
 
+// take a single school's info and put it into a bootstrap card
 class School extends React.Component<SchoolProps> {
   render() {
     const oneSchool = this.props;
@@ -36,6 +38,7 @@ class School extends React.Component<SchoolProps> {
   }
 }
 
+//put all of the schools info into rows, pulling from the json file
 function SchoolList() {
   return (
     <div className="row">
@@ -46,6 +49,7 @@ function SchoolList() {
   );
 }
 
+// put it all to use
 function App() {
   return (
     <div className="App">
